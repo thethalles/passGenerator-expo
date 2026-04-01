@@ -2,8 +2,17 @@ import React from "react"
 import { TextInput } from "react-native"
 import { styles } from "./inputPassStyle"
 
-export function InputPass(){
+interface InputPassProps{
+    pass: string
+}
+
+export function InputPass(props: InputPassProps){
     return(
-        <TextInput style={styles.inputer} placeholder="password" />
+        <TextInput 
+            placeholder="password"
+            placeholderTextColor={'#c6c6c6'}
+            value={props.pass}
+            style={styles.inputer}        
+        />
     )
 }
